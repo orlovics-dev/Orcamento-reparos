@@ -1,0 +1,433 @@
+Usando este codigo como ultima atualizacao
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa 3 Irmãos Tudo em Reparos Hidraulicos - Reparos Residenciais Rápidos e Confiáveis</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #1E3A5F;
+--accent: #FFD700;
+--white: #ffffff;
+--light: #f8fafc;
+--gray: #64748b;
+--dark-gray: #334155;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Roboto', sans-serif;
+line-height: 1.6;
+color: var(--dark-gray);
+}
+a {
+text-decoration: none;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+header {
+background: var(--white);
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+}
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 0;
+}
+.logo {
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--primary);
+}
+.nav-menu {
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+.nav-menu a {
+color: var(--dark-gray);
+font-weight: 500;
+transition: color 0.3s;
+}
+.nav-menu a:hover {
+color: var(--primary);
+}
+.btn-wa {
+background: var(--accent);
+color: var(--primary);
+padding: 0.75rem 1.5rem;
+border-radius: 50px;
+font-weight: 500;
+box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+transition: all 0.3s;
+}
+.btn-wa:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+}
+.mobile-menu {
+display: none;
+flex-direction: column;
+cursor: pointer;
+}
+section {
+padding: 5rem 0;
+}
+h1, h2 {
+color: var(--primary);
+margin-bottom: 1rem;
+}
+h1 { font-size: 3rem; font-weight: 700; }
+h2 { font-size: 2.5rem; }
+.hero {
+background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%);
+color: var(--white);
+padding: 8rem 0 5rem;
+text-align: center;
+}
+.hero-content {
+display: grid;
+grid-template-columns: 1fr;
+gap: 3rem;
+align-items: center;
+}
+.hero-text h1 {
+color: var(--white);
+font-size: 3.5rem;
+}
+.hero-img img {
+width: 100%;
+max-width: 500px;
+border-radius: 20px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.sobre, .porque-nos, .depoimentos, .contato {
+background: var(--light);
+}
+.servico {
+background: var(--white);
+}
+.servico:nth-child(even) {
+background: var(--light);
+}
+.grid-2 {
+display: grid;
+grid-template-columns: 1fr;
+gap: 3rem;
+}
+.card {
+background: var(--white);
+padding: 2rem;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+text-align: center;
+}
+.emoji { font-size: 4rem; margin-bottom: 1rem; }
+form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+max-width: 500px;
+margin: 2rem auto;
+}
+input, select, textarea {
+padding: 1rem;
+border: 2px solid #e2e8f0;
+border-radius: 10px;
+font-size: 1rem;
+}
+input:focus, select:focus, textarea:focus {
+outline: none;
+border-color: var(--primary);
+}
+.faq-item {
+margin-bottom: 1rem;
+}
+.faq-item summary {
+background: var(--primary);
+color: var(--white);
+padding: 1.5rem;
+border-radius: 10px;
+cursor: pointer;
+font-weight: 500;
+}
+.faq-item details[open] summary {
+border-radius: 10px 10px 0 0;
+}
+.faq-item p {
+background: var(--white);
+padding: 1.5rem;
+border-radius: 0 0 10px 10px;
+margin: 0;
+}
+.depoimento {
+background: var(--white);
+padding: 2rem;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+margin-bottom: 2rem;
+text-align: center;
+}
+.depoimento cite {
+display: block;
+font-weight: 700;
+color: var(--primary);
+margin-top: 1rem;
+}
+footer {
+background: var(--primary);
+color: var(--white);
+text-align: center;
+padding: 2rem 0;
+}
+@media (min-width: 768px) {
+.nav-menu { display: flex; }
+.mobile-menu { display: none !important; }
+.hero-content {
+grid-template-columns: 1fr 1fr;
+text-align: left;
+}
+.hero-text h1 { font-size: 4rem; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+h2 { font-size: 2.8rem; }
+}
+@media (max-width: 768px) {
+.nav-menu {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+background: var(--white);
+flex-direction: column;
+padding: 1rem;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.nav-menu.active { display: flex; }
+.mobile-menu { display: flex; gap: 0.5rem; }
+.hero-text h1 { font-size: 2.5rem; }
+section { padding: 3rem 0; }
+}
+</style>
+</head>
+<body>
+<header>
+<nav class="container">
+<div class="logo">Casa 3 Irmãos Tudo em Reparos</div>
+<ul class="nav-menu">
+<li><a href="#hero">Início</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+<a href="https://wa.me/5517981276481?text=Olá%20Casa%203%20Irmãos%20Reparos!%20Gostaria%20de%20um%20orçamento." class="btn-wa">WhatsApp</a>
+<div class="mobile-menu" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+</header>
+<main>
+<!-- 1. Hero Section -->
+<section id="hero" class="hero">
+<div class="container">
+<div class="hero-content">
+<div class="hero-text">
+<h1>Casa 3 Irmãos Tudo em Reparos</h1>
+<p>Reparos residenciais rápidos, confiáveis e acessíveis. Elétrica, hidráulica</p>
+<a href="https://wa.me/5517981276481?text=Olá%20Casa%203%20Irmãos%20Reparos!%20Gostaria%20de%20um%20orçamento%20para%20reparos." class="btn-wa" style="display: inline-block;">Fale pelo WhatsApp Agora!</a>
+</div>
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1558618047-3c8c76bbb17e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Anônio Orlovic - Técnico Responsável">
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Sobre Nós -->
+<section id="sobre" class="sobre">
+<div class="container">
+<h2 class="text-center">Sobre a Casa 3 Irmãos Tudo em Reparos</h2>
+<div class="grid-2">
+<div>
+<p>Somos uma empresa dedicada a oferecer serviços de reparos residenciais de alta qualidade. Com mais de 30 anos de experiência combinada, atendemos a cidade de Barretos com agilidade, honestidade e profissionalismo. Nossa missão é resolver seus problemas domésticos de forma rápida e eficiente, garantindo satisfação total.</p>
+</div>
+</div>
+</section>
+<!-- 3. Por Que Escolher Nós -->
+<section id="porque" class="porque-nos">
+<div class="container">
+<h2 class="text-center">Por Que Escolher a Casa 3 Irmãos Tudo em Reparos?</h2>
+<div class="grid-2">
+<div class="card">
+<div class="emoji">⭐</div>
+<h3>Experiência Comprovada</h3>
+<p>Mais de 30 anos no mercado, centenas de serviços realizados com excelência.</p>
+</div>
+<div class="card">
+<div class="emoji">⚡</div>
+<h3>Atendimento Rápido</h3>
+<p>Resposta imediata via WhatsApp e visitas no mesmo dia sempre que possível.</p>
+</div>
+<div class="card">
+<div class="emoji">💰</div>
+<h3>Preços Justos</h3>
+<p>Orçamentos transparentes sem surpresas. Melhor custo-benefício da região.</p>
+</div>
+<div class="card">
+<div class="emoji">✅</div>
+<h3>Garantia Total</h3>
+<p>Garantia em todos os serviços. Sua satisfação é nossa prioridade.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Serviços Hidráulica -->
+<section id="hidraulica" class="servico">
+<div class="container">
+<h2 class="text-center">Serviços Hidráulicos</h2>
+<p class="text-center mb-4">Realizamos monitoramento para detectar vazamentos e consertos hidráulicos profissionais.</p>
+<iv class="grid-2">
+<div class="card">
+<div class="emoji">🚿</div>
+<h3>Consertos de Vazamentos</h3>
+<p>Reparo em pias, banheiros e chuveiros.</p>
+</div>
+
+<!-- 8. Depoimentos -->
+<section id="depoimentos" class="depoimentos">
+<div class="container">
+<h2 class="text-center">O Que Nossos Clientes Dizem</h2>
+<div class="grid-2">
+<div class="depoimento">
+<p>"Serviço impecável! Resolveu meu problema em rapidamente. Recomendo!"</p>
+<cite>- Maria Silva</cite>
+</div>
+<div class="depoimento">
+<p>"Preço justo. Casa 3 Irmãos é sinônimo de qualidade."</p>
+<cite>- João Santos</cite>
+</div>
+<div class="depoimento">
+<p>"Reparo sem bagunça. Atendimento nota 10 via WhatsApp."</p>
+<cite>- Ana Oliveira</cite>
+</div>
+<div class="depoimento">
+<p>"Profissionais honestos e caprichosos. Voltarei sempre!"</p>
+<cite>- Pedro Costa</cite>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. FAQ -->
+<section id="faq" class="faq">
+<div class="container">
+<h2 class="text-center">Perguntas Frequentes</h2>
+<div class="faq-container">
+<div class="faq-item">
+<details>
+<summary>Vocês atendem no mesmo dia?</summary>
+<p>Sim! Na maioria dos casos, atendemos no mesmo dia da solicitação ou agendamento via WhatsApp.</p>
+</details>
+</div>
+<div class="faq-item">
+<details>
+<summary>Os preços incluem material?</summary>
+<p>Orçamento detalhado: mão de obra + material (Possíveis alterações após visita técnica. Transparente e sem surpresas.</p>
+</details>
+</div>
+<div class="faq-item">
+<details>
+<summary>Qual a área de atendimento?</summary>
+<p>Barretos. Consulte via WhatsApp para regiões mais distantes.</p>
+</details>
+</div>
+<div class="faq-item">
+<details>
+<summary>Vocês dão garantia?</summary>
+<p>Sim, garantia de 3 a 12 meses dependendo do serviço realizado.</p>
+</details>
+</div>
+<div class="faq-item">
+<details>
+<summary>Como solicitar orçamento?</summary>
+<p>Basta clicar no botão WhatsApp e descrever o serviço necessário!</p>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Contato -->
+<section id="contato" class="contato">
+<div class="container">
+<h2 class="text-center">Entre em Contato</h2>
+<p class="text-center mb-4">Solicite seu orçamento gratuito agora mesmo!</p>
+<form id="contact-form">
+<input type="text" name="name" placeholder="Seu Nome" required>
+<input type="tel" name="tel" placeholder="Seu Telefone" required>
+<select name="service">
+<option value="">Selecione o Serviço</option>
+<option value="Hidráulica">Hidráulica</option>
+<option value="Reparos Gerais">Reparos Gerais</option>
+<option value="Outro">Outro</option>
+</select>
+<textarea name="msg" rows="5" placeholder="Descreva o serviço necessário..."></textarea>
+<button type="submit" class="btn-wa" style="width: 100%;">Enviar</button>
+</form>
+<div style="text-align: center; margin-top: 2rem;">
+
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<p>&copy; 2026 Casa 3 Irmãos Tudo em Reparos. Todos os direitos reservados. | WhatsApp: (17) 98127-6481</p>
+</div>
+</footer>
+<script>
+function toggleMenu() {
+const menu = document.querySelector('.nav-menu');
+menu.classList.toggle('active');
+}
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({ behavior: 'smooth' });
+}
+});
+});
+// WhatsApp forms
+document.querySelectorAll('form').forEach(form => {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const fd = new FormData(form);
+let msg = 'Olá Casa 3 Irmãos Tudo em Reparos! ';
+msg += Nome: ${fd.get('name') || 'Não informado'} | ;
+msg += Telefone: ${fd.get('tel') || 'Não informado'} | ;
+msg += Serviço: ${fd.get('service') || 'Não especificado'} | ;
+msg += Mensagem: ${fd.get('msg') || 'Orçamento geral'};
+const url = https://wa.me/5517981276481?text=${encodeURIComponent(msg)};
+window.open(url, '_blank');
+});
+});
+</script>
+</body>
+</html>
